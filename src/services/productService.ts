@@ -6,6 +6,12 @@ const createProduct = async (product: TProduct) => {
   return result;
 };
 
+const getProducts = async () => {
+  const result = await productModel.getProducts();
+  return result;
+};
+
 export default { 
   createProduct,
+  getProducts,
 };
