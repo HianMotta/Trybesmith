@@ -11,3 +11,9 @@ export type TUser = {
   level: number,
   password?: string, 
 };
+
+export type TOrder = {
+  id: number,
+  userId: number,
+  productsIds: [number, number]
+};
