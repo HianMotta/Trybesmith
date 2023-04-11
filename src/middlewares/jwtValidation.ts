@@ -1,7 +1,7 @@
 import { Response, Request, NextFunction } from 'express';
 import jwt from '../jwtFunctions';
 
-export default async function jwtValidation(req: Request, res: Response, next: NextFunction) {
+export default function jwtValidation(req: Request, res: Response, next: NextFunction) {
   const { authorization } = req.headers;
 
   if (!authorization) res.status(401).json({ message: 'Token not found' });
