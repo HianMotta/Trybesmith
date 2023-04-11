@@ -10,9 +10,9 @@ const orderSchema = Joi.array().items(Joi.number().integer()).min(1).required()
   });
 
 export default async function orderValidation(req: Request, res: Response, next: NextFunction) {
-  const { body } = req;
+  const { productsIds } = req.body;
 
-  const { error } = orderSchema.validate(body);
+  const { error } = orderSchema.validate(productsIds);
 
   if (error) {
     const httpStatus = error.message.includes('required') ? 400 : 422;

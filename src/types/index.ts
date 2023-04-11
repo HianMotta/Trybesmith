@@ -14,9 +14,9 @@ export type TUser = {
 };
 
 export type TOrder = {
-  id: number,
-  userId: number,
-  productsIds: [number, number]
+  id?: number,
+  userId?: number,
+  productsIds: Array<number>
 };
 
 export type TLogin = {
